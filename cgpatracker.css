@@ -1,0 +1,151 @@
+body {
+    background: linear-gradient(45deg, #1f1c2c, #928dab, #ffcc00);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 40px;
+    border-radius: 50px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+nav a {
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1) translateY(-2px);
+}
+.semester {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.sem label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.sem input {
+    width: 80px;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #928dab;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sem input:focus {
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+}
+.button1, .button2 {
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.button1 {
+    background: linear-gradient(45deg, #ffcc00, #ffb200);
+    color: #1f1c2c;
+}
+
+.button1:hover {
+    background: linear-gradient(45deg, #e6b800, #ffcc00);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button2 {
+    background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+    color: white;
+}
+
+.button2:hover {
+    background: linear-gradient(45deg, #e60000, #ff4d4d);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.result input {
+    padding: 12px;
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #928dab;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.result input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+}
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer a {
+    color: white;
+    margin: 0 15px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+}
+
+.footer a:hover::after {
+    background-color: #ffcc00;
+    animation: underlineAnimation 0.3s ease-out;
+}
+
+@keyframes underlineAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

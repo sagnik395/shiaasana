@@ -1,0 +1,10 @@
+/* Make subject input text white */
+#subject {
+    color: white;
+    background-color: black; /* Optional: Black background */
+}
+
+/* Ensure time input text stays black */
+input[type="time"] {
+    color: black;
+}

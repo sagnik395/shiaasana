@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Tracker</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        th {
+            background-color: rgba(0, 123, 255, 0.7);
+        }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            width: 90%;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <h2>SGPA Tracker</h2>
+    <table id="subjectsTable">
+        <tr>
+            <th>Subject</th>
+            <th>Grade (O, A+, A, B+, B, C, D, etc.)</th>
+            <th>Credits</th>
+        </tr>
+    </table>
+    <button onclick="addSubject()">Add Subject</button>
+    <button onclick="calculateSGPA()">Calculate SGPA</button>
+    <h3 id="result"></h3>
+
+    <script>
+        function addSubject() {
+            let table = document.getElementById("subjectsTable");
+            let row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            
+            cell1.innerHTML = '<input type="text" placeholder="Subject Name">';
+            cell2.innerHTML = '<input type="text" placeholder="Grade (O, A+, A, etc.)">';
+            cell3.innerHTML = '<input type="number" min="1" placeholder="Credits">';
+        }
+
+        function getGradePoint(grade) {
+            let gradePoints = {
+                "O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "D": 4, "RA": 0, "SA": 0, "W": 0
+            };
+            return gradePoints[grade] || 0;
+        }
+
+        function calculateSGPA() {
+            let table = document.getElementById("subjectsTable");
+            let rows = table.rows;
+            let totalCredits = 0, totalPoints = 0;
+            
+            for (let i = 1; i < rows.length; i++) {
+                let grade = rows[i].cells[1].children[0].value.trim().toUpperCase();
+                let credits = parseFloat(rows[i].cells[2].children[0].value);
+                
+                if (grade && !isNaN(credits)) {
+                    let gradePoint = getGradePoint(grade);
+                    totalPoints += gradePoint * credits;
+                    totalCredits += credits;
+                }
+            }
+            
+            let sgpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : 0;
+            document.getElementById("result").innerText = "SGPA: " + sgpa;
+        }
+    </script>
+</body>
+</html>

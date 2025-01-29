@@ -1,0 +1,495 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  @media (max-width: 2560px) {
+    html {
+      font-size: 65%;
+    }
+  
+    h1 {
+      font-size: 8rem;
+    }
+  
+    .footer {
+      top: 69.3rem;
+    }
+  }
+  
+  @media (max-width: 1600px) {
+    html {
+      font-size: 60%;
+    }
+  
+    h1 {
+      font-size: 8rem;
+    }
+  
+    .footer {
+      top: 69.3rem;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    html {
+      font-size: 32%;
+    }
+  
+    h1 {
+      font-size: 8rem;
+    }
+  
+    .footer {
+      top: 73rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 34%;
+    }
+  
+    h1 {
+      font-size: 8rem;
+    }
+  
+    .footer {
+      top: 127rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 27%;
+    }
+  
+    h1 {
+      font-size: 5.25rem;
+    }
+  
+    .footer {
+      top: 122rem;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    html {
+      font-size: 24.5%;
+    }
+  
+    h1 {
+      font-size: 5rem;
+    }
+  
+    .footer {
+      top: 122rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    html {
+      font-size: 22.5%;
+    }
+  
+    h1 {
+      font-size: 4.75rem;
+    }
+  }
+  
+  @media (max-width: 280px) {
+    html {
+      font-size: 20.5%;
+    }
+  
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+  
+  .container {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url("C:\Users\SHIVAM\Downloads\Designer (1).png");
+    background-size: cover;
+  }
+  
+  .header {
+    position: fixed;
+    margin-top: 6rem;
+    height: max-content;
+    width: max-content;
+    background-color: transparent;
+  }
+  
+  h1 {
+    font-family: 'Merriweather',
+      serif;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(237, 6, 6);
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgb(237, 6, 6);
+  }
+  
+  nav {
+    position: fixed;
+    width: 100vw;
+    height: 7.5rem;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul a {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(237, 6, 6);
+    margin: 2.5rem 1.5rem;
+    font-family: 'Poppins',
+      sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    transition: .1s all linear;
+  }
+  
+  ul a:hover {
+    transition: .2s all linear;
+    color: transparent;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(237, 6, 6);
+  }
+  
+  .footer {
+    position: fixed;
+    margin-bottom: 2.5rem;
+    height: 7rem;
+    width: 100vw;
+    background-color: transparent;
+  }
+  
+  #copy {
+    color: rgb(237, 6, 6);
+    position: absolute;
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: 0rem;
+    font-family: 'Poppins',
+      sans-serif;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  #by {
+    color: rgb(237, 6, 6);
+    position: absolute;
+    background-color: transparent;
+    font-family: 'Poppins',
+      sans-serif;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    left: 3rem;
+  }
+  
+  #whatsapp {
+    position: absolute;
+    color: rgb(237, 6, 6);
+    margin-top: 2.5rem;
+    margin-right: 5rem;
+    font-size: 3rem;
+    right: 18rem;
+  }
+  
+  
+  #twitter {
+    position: absolute;
+    color: rgb(237, 6, 6);
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+    font-size: 3rem;
+    right: 8rem;
+  }
+  
+  #insta {
+    position: absolute;
+    color: rgb(237, 6, 6);
+    margin-top: 2.5rem;
+    margin-right: 2rem;
+    font-size: 3rem;
+    right: 4.5rem;
+  }
+  
+  #link {
+    position: absolute;
+    color: rgb(237, 6, 6);
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+    font-size: 3rem;
+    right: 1rem;
+  }
+  
+  #fb:hover {
+    color: #1877f2;
+  }
+  
+  #git:hover {
+    color: #6e5494;
+  }
+  
+  #twitter:hover {
+    color: #1da1f2;
+  }
+  
+  #link:hover {
+    color: #007bb5;
+  }
+  
+  #insta:hover {
+    color: #c32aa3;
+  }
+  
+  #whatsapp:hover {
+    color: #25D366;
+  }
+  
+  .videoback {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -100;
+  }
+  
+  .button1:hover,
+  .button2:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  
+  .button2 {
+    color: rgb(237, 6, 6);
+    letter-spacing: 0.1rem;
+    text-shadow: 0.25rem 0.25rem 0 rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: 0.5s;
+    color: rgb(237, 6, 6);
+    /* background-image: linear-gradient(to right, white 0%, grey 100%); */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4rem;
+    z-index: 2;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    height: 5rem;
+    width: 18rem;
+    font-family: 'Poppins',
+      sans-serif;
+    font-size: 2rem;
+    border: none;
+  }
+  
+  .button1 {
+    color: rgb(237, 6, 6);
+    letter-spacing: 0.1rem;
+    text-shadow: 0.25rem 0.25rem 0 rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: 0.5s;
+    color: rgb(237, 6, 6);
+    /* background-image: linear-gradient(to right, white 0%, grey 100%); */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4rem;
+    z-index: 2;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    height: 5rem;
+    width: 18rem;
+    font-family: 'Poppins',
+      sans-serif;
+    font-size: 2rem;
+    border: none;
+  }
+  
+  input {
+    border: none;
+    background: transparent;
+    width: 40rem;
+    display: block;
+    color: rgb(237, 6, 6);
+    font-family: 'Poppins',
+      sans-serif;
+    padding: 0.3rem 0.3rem;
+    text-align: center;
+    transition: all 0.1s linear;
+    border-bottom: 0.1rem solid black;
+    margin: .1rem 0;
+  }
+  
+  .sem input {
+    font-size: 2rem;
+    width: 8rem;
+  }
+  
+  input:focus,
+  input:active,
+  select:focus {
+    box-shadow: inset 15rem 15rem 15rem rgba(0, 0, 0, 0.5),
+    inset 0rem 0rem 0.5rem rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+  }
+  
+  .semester {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 16rem;
+  }
+  
+  .sem {
+    display: flex;
+    padding: 0.1rem;
+  }
+  
+  label {
+    height: auto;
+    width: auto;
+    /* font-family: 'Black Ops One', cursive; */
+    font-family: 'Poppins',
+      sans-serif;
+    color: rgb(237, 6, 6);
+    letter-spacing: 0.1rem;
+    text-shadow: 0.25rem 0.25rem 0 rgba(255, 255, 255, 0.1);
+    padding: 0rem 1rem;
+    font-size: 3rem;
+  }
+  
+  .result {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 58rem;
+    overflow: hidden;
+  }
+  
+  #cgpa,
+  #perc {
+    font-family: 'Poppins',
+      sans-serif;
+    color: rgb(237, 6, 6);
+    letter-spacing: 0.1rem;
+    text-shadow: 0.25rem 0.25rem 0 rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.12) 20%, rgba(255, 255, 255, 0.02) 40%, rgba(255, 255, 255, 0.1) 100%);
+    background-size: 800px 104px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  
+  @-webkit-keyframes placeholderShimmer {
+    0% {
+      background-position: -468px 0;
+    }
+  
+    100% {
+      background-position: 468px 0;
+    }
+  }
+  
+  @keyframes placeholderShimmer {
+    0% {
+      background-position: -468px 0;
+    }
+  
+    100% {
+      background-position: 468px 0;
+    }
+  }
+  
+  .cal {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 62rem;
+    margin: 2rem;
+    overflow: hidden;
+  }
+  
+  .result input {
+    box-shadow: inset 15rem 15rem 15rem rgba(0, 0, 0, 0.5),
+      inset 0rem 0rem 0.5rem rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    display: block;
+    font-weight: bold;
+    padding: 0.3rem 0.3rem;
+    pointer-events: none;
+    margin: 0 1rem;
+  }
+  
+  input::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+  .note {
+    position: fixed;
+    display: flex;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    top: 55rem;
+  }
+  
+  .note p {
+    font-family: 'Poppins',
+      sans-serif;
+    color: rgb(237, 6, 6);
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

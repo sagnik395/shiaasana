@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function calculateCGPA() {
+            let totalCredits = 0, totalPoints = 0;
+            for (let i = 1; i <= 8; i++) {
+                let sgpa = parseFloat(document.getElementById(`sgpa${i}`).value) || 0;
+                let credits = parseFloat(document.getElementById(`credits${i}`).value) || 0;
+                totalPoints += sgpa * credits;
+                totalCredits += credits;
+            }
+            let cgpa = totalCredits ? (totalPoints / totalCredits).toFixed(2) : 0;
+            document.getElementById('cgpa').textContent = cgpa;
+            
+            if (cgpa < 8.5) {
+                alert("For getting better results, be prepared tomorrow!");
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-2xl shadow-xl w-96">
+        <h2 class="text-2xl font-bold text-center mb-4">CGPA Tracker</h2>
+        <div id="semesters" class="space-y-2">
+            <script>
+                for (let i = 1; i <= 8; i++) {
+                    document.write(`
+                        <div class="flex gap-4 mb-2">
+                            <input type="number" id="sgpa${i}" class="p-2 border rounded-lg w-20" placeholder="SGPA ${i}" min="0" max="10" step="0.01" oninput="calculateCGPA()">
+                            <input type="number" id="credits${i}" class="p-2 border rounded-lg w-20" placeholder="Credits" min="1" step="1" oninput="calculateCGPA()">
+                        </div>
+                    `);
+                }
+                
+            </script>
+        </div>
+        <h3 class="text-lg font-semibold text-center mt-4">CGPA: <span id="cgpa" class="text-blue-500">0.00</span></h3>
+        <div class="flex justify-between mt-4">
+            <button onclick="window.location.href='sgpa.html'" class="p-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">SGPA</button>
+            <button onclick="window.location.href='index.html'" class="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Home</button>
+        </div>
+        <div class="flex justify-between mt-4">
+            <button onclick="window.location.href='timetable.html'" class="p-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition">Time Table</button>
+        </div>
+    </div>
+</body>
+</html>
+
